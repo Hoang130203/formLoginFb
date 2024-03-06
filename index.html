@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Facebook</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="root">
+            <div class="container">
+                <div class="head">
+                    <h1>Đăng ký</h1>
+                    <span class="close_icon">
+                        <img  src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/zgulV2zGm8t.png" >
+                    </span>
+                    <h4>Nhanh chóng và dễ dàng.</h4>
+                </div>
+                <div class="content">
+                    <div style="display: flex;justify-content: start;">
+                        <div class="wrap_div">
+                            <input id="firstname" class="name" type="text" placeholder="Họ"/>
+                            <div id="tip1" class="tooltip">
+                                <img class="icon_up" src="./image/up.png"></img>
+                                <div class="tooltip_content">
+                                    Tên bạn là gì?
+                                </div>
+                            </div>
+                            <img id="icon_1" class="war_icon" src="./image/warning.png"/>
+                        </div>
+                        <div class="wrap_div">
+                            <input id="lastname" class="name" style="margin-left: 5px;" type="text" placeholder="Tên"/>
+                            <div id="tip2" class="tooltip">
+                                <img class="icon_up" src="./image/up.png"></img>
+                                <div class="tooltip_content">
+                                    Tên bạn là gì?
+                                </div>
+                            </div>
+                            <img id="icon_2" class="war_icon" src="./image/warning.png"/>
+                        </div>    
+                    </div>
+                    <div style="display: flex;justify-content: start;">
+                        <div class="wrap_div_2">
+                            <input id="sdt_email" class="sdt_email" type="text" placeholder="Số di động hoặc email"/>
+                            <div id="tip3" class="tooltip">
+                                <img class="icon_up" src="./image/up.png"></img>
+                                <div class="tooltip_content">
+                                    Chưa đúng định dạng sđt/ email
+                                </div>
+                            </div>
+                            <img id="icon_3" style="top: -38px;" class="war_icon" src="./image/warning.png"/>
+                        </div>
+                    </div>
+                    <div class="wrap_div_2">
+                        <input id="pass" class="pass" type="password" placeholder="Mật khẩu mới"/>    
+                        <div id="tip4" class="tooltip">
+                            <img class="icon_up" src="./image/up.png"></img>
+                            <div class="tooltip_content">
+                               Nhập mật khẩu tối thiểu 6 ký tự
+                            </div>
+                        </div>
+                        <img id="icon_4" class="war_icon" src="./image/warning.png"/>
+                    </div>
+                    <div style="width: 100%;display: flex;justify-content: space-between;">
+                        <p id="field_name_1" class="field_name">Ngày sinh <img style="width: 12px;cursor: pointer;" src="./image/chamhoi.png"/></p>
+                        <div id="tip5" class="tooltip" >
+                            <img class="icon_up" src="./image/up.png"></img>
+                            <div class="tooltip_content">
+                                Ngày sinh của bạn có vẻ chưa đúng!
+                            </div>
+                        </div>
+                        <img id="icon_5" class="war_icon_2" src="./image/warning.png"/>
+                    </div>
+                    <div class="select_container">
+                        <select id="day" onchange="removeborder()">
+                        
+                        </select>
+                        <select id="month"  onchange="removeborder()">
+                            
+                        </select>
+                        <select id="year"  onchange="removeborder()">
+                            
+                        </select>
+                    </div>
+                    <div style="width: 100%;display: flex;justify-content: space-between;">
+                        <p id="field_name_2" class="field_name">Giới tính <img style="width: 12px;cursor: pointer;" src="./image/chamhoi.png"/></p>
+                        <div id="tip6" class="tooltip">
+                            <img class="icon_up" src="./image/up.png"></img>
+                            <div class="tooltip_content">
+                                Hãy chọn giới tính của bạn!
+                            </div>
+                        </div>
+                        <img id="icon_6" class="war_icon_2" src="./image/warning.png"/>
+                    </div>
+                    <div class="select_container">
+                        <div class="gender_container">
+                            <label class="label" for="woman">Nữ</label>
+                            <input onclick="hide()" name="gender" id="woman" type="radio"/>
+                        </div>
+                        <div class="gender_container">
+                            <label  class="label" for="man">Nam</label>
+                            <input onclick="hide()" name="gender" id="man" type="radio"/>
+                        </div>
+                        <div class="gender_container">
+                            <label class="label" for="other">Tùy chỉnh</label>
+                            <input onclick="openHide()" name="gender" id="other" type="radio"/>
+                        </div>
+                    
+                    </div>
+                    <div class="other_gender_container">
+                        <select class="other_gender">
+                            <option selected value disabled>Chọn danh xưng</option>
+                            <option value='1'>Cô ấy: "Chúc cô ấy sinh nhật vui vẻ!"</option>
+                            <option value='2'>Anh ấy: "Chúc anh ấy sinh nhật vui vẻ!"</option>
+                            <option value='3'>Họ: "Chúc họ sinh nhật vui vẻ!"</option>
+                        </select>
+                        <p class="field_name">Danh xưng của bạn hiển thị với tất cả mọi người.
+                        </p>
+                        <input class="sdt_email" type="text" placeholder="Giới tính (không bắt buộc)"/>
+                    </div>
+                    
+                    <p class="policy">
+                        Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook. <a href="https://www.facebook.com/help/637205020878504">Tìm hiểu thêm.</a>
+                    </p>
+                    <p class="policy">
+                        Bằng cách nhấp vào Đăng ký, bạn đồng ý với <a href="https://www.facebook.com/legal/terms/update">Điều khoản</a> , <a href="https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0">Chính sách quyền riêng tư</a> và <a href="https://www.facebook.com/privacy/policies/cookies/?entry_point=cookie_policy_redirect&entry=0">Chính sách cookie</a> của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.
+                    </p>
+                    <div class="div_signup">
+                        <button class="submit" onclick="submit()">Đăng ký</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="script.js">
+    
+</script>
+
